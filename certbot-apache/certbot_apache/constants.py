@@ -131,6 +131,18 @@ CLI_DEFAULTS = {
 MOD_SSL_CONF_DEST = "options-ssl-apache.conf"
 """Name of the mod_ssl config file as saved in `IConfig.config_dir`."""
 
+
+UPDATED_MOD_SSL_CONF_DIGEST = ".updated-options-ssl-apache-conf-digest.txt"
+"""Name of the hash of the updated or informed mod_ssl_conf as saved in `IConfig.config_dir`."""
+
+ALL_SSL_OPTIONS_HASHES = [
+    '0f81093a1465e3d4eaa8b0c14e77b2a2e93568b0fc1351c2b87893a95f0de87c',
+    '9a7b32c49001fed4cff8ad24353329472a50e86ade1ef9b2b9e43566a619612e',
+    'a6d9f1c7d6b36749b52ba061fff1421f9a0a3d2cfdafbd63c05d06f65b990937',
+    '7f95624dd95cf5afc708b9f967ee83a24b8025dc7c8d9df2b556bbc64256b3ff',
+]
+"""SHA256 hashes of the contents of previous versions of all versions of MOD_SSL_CONF_SRC"""
+
 AUGEAS_LENS_DIR = pkg_resources.resource_filename(
     "certbot_apache", "augeas_lens")
 """Path to the Augeas lens directory"""
