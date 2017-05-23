@@ -1471,6 +1471,7 @@ class InstallSslOptionsConfTest(util.ApacheTest):
 
     def test_prev_file_updates_to_current(self):
         from certbot_apache.constants import ALL_SSL_OPTIONS_HASHES
+        ALL_SSL_OPTIONS_HASHES.insert(0, "test_hash_does_not_match")
         with mock.patch('certbot.crypto_util.sha256sum') as mock_sha256:
             mock_sha256.return_value = ALL_SSL_OPTIONS_HASHES[0]
             self._call()
