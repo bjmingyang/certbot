@@ -1438,7 +1438,7 @@ class MultiVhostsTest(util.ApacheTest):
 class InstallSslOptionsConfTest(util.ApacheTest):
     """Test that the options-ssl-nginx.conf file is installed and updated properly."""
 
-    def setUp(self):
+    def setUp(self): # pylint: disable=arguments-differ
         super(InstallSslOptionsConfTest, self).setUp()
 
         self.config = util.get_apache_configurator(

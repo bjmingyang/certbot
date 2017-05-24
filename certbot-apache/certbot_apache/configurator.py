@@ -5,7 +5,6 @@ import fnmatch
 import logging
 import os
 import re
-import shutil
 import socket
 import time
 
